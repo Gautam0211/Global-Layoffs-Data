@@ -44,6 +44,18 @@ The data cleaning process follows these steps:
 
 - Removed the `row_num` column used for intermediate processing.
 
+## Key Tools Used
+
+The following SQL tools and techniques were employed during the data cleaning process:
+
+- **Common Table Expressions (CTEs):** Used for organizing intermediate steps, such as identifying duplicates for removal.
+- **Window Functions:** Leveraged `ROW_NUMBER()` to identify duplicate rows and prioritize unique entries.
+- **Joins:** Utilized self-joins to populate missing values, such as industries, based on related data.
+- **String Functions:** Applied functions like `TRIM()` and `STR_TO_DATE()` to clean and standardize string fields.
+- **Conditional Updates:** Updated columns with specific conditions to handle null or inconsistent values.
+- **Aggregate Queries:** Identified inconsistencies across columns using `DISTINCT` and grouped results.
+
+
 ## Outcomes
 
 After cleaning, the dataset is:
@@ -51,3 +63,5 @@ After cleaning, the dataset is:
 - Free from duplicates and inconsistencies.
 - Standardized for seamless analysis.
 - Ready for exploratory data analysis (EDA) and visualization.
+
+- 
